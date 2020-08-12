@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--    for Material Search-->
+    <declare-styleable name="MaterialSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchCloseIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionIcon" format="integer" />
+        <attr name="searchSuggestionBackground" format="integer" />
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+    <!--for Chips -->
+
+
+    <declare-styleable name="Chip">
+        <attr name="mcv_chipText" format="string" />
+        <attr name="mcv_hasIcon" format="boolean" />
+        <attr name="mcv_chipIcon" format="integer" />
+        <attr name="mcv_closable" format="boolean" />
+        <attr name="mcv_selectable" format="boolean" />
+        <attr name="mcv_backgroundColor" format="color" />
+        <attr name="mcv_selectedBackgroundColor" format="color" />
+        <attr name="mcv_textColor" format="color" />
+        <attr name="mcv_selectedTextColor" format="color" />
+        <attr name="mcv_closeColor" format="color" />
+        <attr name="mcv_selectedCloseColor" format="color" />
+        <attr name="mcv_cornerRadius" format="dimension" />
+        <attr name="mcv_strokeSize" format="dimension" />
+        <attr name="mcv_strokeColor" format="color" />
+        <attr name="mcv_iconText" format="string" />
+        <attr name="mcv_iconTextColor" format="color" />
+        <attr name="mcv_iconTextBackgroundColor" format="color" />
+    </declare-styleable>
+
+
+
+    <!--// For Stepper Indicator  -->
+    <declare-styleable name="StepperIndicator" tools:ignore="ResourceName">
+        <attr name="stpi_stepCount" format="integer"/>
+        <attr name="stpi_animDuration" format="integer"/>
+
+        <attr name="stpi_circleColor" format="color"/>
+        <attr name="stpi_circleRadius" format="dimension"/>
+        <attr name="stpi_circleStrokeWidth" format="dimension"/>
+
+        <attr name="stpi_indicatorColor" format="color"/>
+        <attr name="stpi_indicatorRadius" format="dimension"/>
+
+        <attr name="stpi_lineColor" format="color"/>
+        <attr name="stpi_lineDoneColor" format="color"/>
+        <attr name="stpi_lineStrokeWidth" format="dimension"/>
+        <attr name="stpi_lineMargin" format="dimension"/>
+
+        <attr name="stpi_showDoneIcon" format="boolean"/>
+        <attr name="stpi_showStepNumberInstead" format="boolean"/>
+        <attr name="stpi_doneIconDrawable" format="reference"/>
+
+        <attr name="stpi_useBottomIndicator" format="boolean"/>
+        <attr name="stpi_useBottomIndicatorWithStepColors" format="boolean"/>
+        <attr name="stpi_bottomIndicatorHeight" format="dimension"/>
+        <attr name="stpi_bottomIndicatorWidth" format="dimension"/>
+        <attr name="stpi_bottomIndicatorMarginTop" format="dimension"/>
+
+        <attr name="stpi_stepsCircleColors" format="reference"/>
+        <attr name="stpi_stepsIndicatorColors" format="reference"/>
+
+        <attr name="stpi_labels" format="reference"/>
+        <attr name="stpi_showLabels" format="boolean"/>
+        <attr name="stpi_labelMarginTop" format="dimension"/>
+        <attr name="stpi_labelSize" format="dimension"/>
+        <attr name="stpi_labelColor" format="color"/>
+    </declare-styleable>
+
+
+    <!--    CircularImageVIew-->
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_designation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:padding="@dimen/_8sdp"
+        android:onClick="@{v->model.itemClicked(v,rawmodel,position)}"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDesignation">
+       <!-- <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/lbl_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="@{rawmodel.name.last}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lbl_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+
+                    android:text="@{rawmodel.name.first}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_title" />
+
+
+                <TextView
+                    android:id="@+id/lbl_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="@{rawmodel.email}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lbl_subtitle" />
+            </LinearLayout>
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/linear_one"
+            android:padding="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.shaadi.test.shadditest.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="50dp"
+                android:layout_weight="0"
+                android:layout_height="50dp"
+                app:imgs_document="@{String.valueOf(rawmodel.picture.thumbnail)}"
+                android:layout_margin="@dimen/_4sdp"
+                android:src="@drawable/profile_small"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:text="@{rawmodel.name.title+`  `+rawmodel.name.first+`  `+rawmodel.name.last}"
+                    android:layout_marginEnd="@dimen/_4sdp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:fontFamily="serif-monospace"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textColor="#039BE5"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:text="@{rawmodel.email}"
+                    android:layout_marginEnd="@dimen/_4sdp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="70dp"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/followed_square_shape"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_2sdp"
+                android:textSize="12sp"
+                android:onClick="@{v->model.itemClicked(v,rawmodel, position)}"
+                android:text="View"
+                android:layout_marginEnd="@dimen/_4sdp" />
+        </LinearLayout>
+
+        <!--        android:text="@{rawmodel.user.flatno.concat(@string/space).concat(rawmodel.user.bulging).concat(@string/space).concat(rawmodel.user.area).concat(@string/space).concat(rawmodel.user.road).concat(@string/space).concat(rawmodel.user.address)}"-->
+
+    </androidx.cardview.widget.CardView>
+
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="rawmodel"
+            type="com.shaadi.test.shadditest.ResultsItem" />
+
+        <variable
+            name="model"
+            type="com.shaadi.test.shadditest.DataItemViewModel" />
+
+    </data>
+</layout>
